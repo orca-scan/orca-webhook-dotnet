@@ -16,7 +16,7 @@ dotnet restore
 dotnet run
 ```
 
-This will now be running on port 3000.
+Your WebHook receiver will now be running on port 3000.
 
 You can emulate an Orca Scan WebHook using [cURL](https://dev.to/ibmdeveloper/what-is-curl-and-why-is-it-all-over-api-docs-9mh) by running the following:
 
