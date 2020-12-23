@@ -19,4 +19,3 @@ dotnet run
 ## History
 
 For change-log, check [releases](https://github.com/orca-scan/orca-webhook-dotnet/releases).
-
