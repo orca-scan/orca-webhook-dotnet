@@ -1,6 +1,6 @@
 # orca-webhook-dotnet
 
-Example of how to build an [Orca Scan WebHook](https://orcascan.com/docs/api/webhooks) endpoint in C# using .Net Core.
+Example of how to build an [Orca Scan WebHook](https://orcascan.com/docs/api/webhooks) endpoint in C# using [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core).
 
 ## Install
 
