@@ -30,7 +30,7 @@ namespace OrcaWebHookDotNet.Controllers
                 // get the name of the sheet this action impacts
                 string sheetName = (data.___orca_sheet_name != null) ? (string)data.___orca_sheet_name : "";
 
-                // get the email address of the user who preformed the action (this will be empty if the request is not secure HTTPS)
+                // get the email of the user who preformed the action (empty if not HTTPS)
                 string userEmail = (data.___orca_user_email != null) ? (string)data.___orca_user_email : "";
 
                 // NOTE:
