@@ -111,3 +111,7 @@ public class OrcaWebHookDotNet : ControllerBase
 ## History
 
 For change-log, check [releases](https://github.com/orca-scan/orca-webhook-dotnet/releases).
+
+## License
+
+&copy; Orca Scan - [Barcode Tracking, Simplified.](https://orcascan.com)
