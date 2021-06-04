@@ -114,4 +114,4 @@ For change-log, check [releases](https://github.com/orca-scan/orca-webhook-dotne
 
 ## License
 
-&copy; Orca Scan - [Barcode Tracking, Simplified.](https://orcascan.com)
+&copy; Orca Scan, the [Barcode Scanner app for iOS and Android](https://orcascan.com).
