@@ -36,7 +36,7 @@ curl --location --request POST 'http://localhost:3000' \
     "Plant City": "Lafayette",
     "Trim": "Premium",
     "Location": "52.2034823, 0.1235817",
-    "Notes": "Needs new tires",
+    "Notes": "Needs new tires"
 }'
 ```
 
