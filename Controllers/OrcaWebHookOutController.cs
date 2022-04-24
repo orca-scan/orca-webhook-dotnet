@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 namespace OrcaWebHookDotNet.Controllers
 {
     [ApiController]
-    [Route("/")]
-    public class OrcaWebHookDotNet : ControllerBase
+    [Route("/orca-webhook-out")]
+    public class OrcaWebHookOutDotNet : ControllerBase
     {
         [HttpPost]
         [Consumes("application/json")]

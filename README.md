@@ -52,7 +52,7 @@ A simple [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet
 
 ```csharp
 [ApiController]
-[Route("/")]
+[Route("/orca-webhook-out")]
 public class OrcaWebHookDotNet : ControllerBase
 {
     [HttpPost]
@@ -107,6 +107,52 @@ public class OrcaWebHookDotNet : ControllerBase
     }
 }
 ```
+
+### WebHook In 
+
+[Orca Scan WebHook In](https://orcascan.com/guides/how-to-update-orca-scan-from-your-system-4b249706)
+
+```csharp
+ public static async Task webHookIn(){
+    // the following example adds a new row to a sheet, setting the value of Barcode, Name, Quantity and Description
+    // TODO: change url to https://api.orcascan.com/sheets/{id}
+    string url = "https://httpbin.org/post";
+    string json = "{\"___orca_action\":\"add\",\"___orca_sheet_name\":\"Sheet1\",\"Barcode\":\"123456789\",\"Name\":\"Test\",\"Quantity\":\"1\",\"Description\":\"Test\"}";
+
+    //send post request
+    var client = new HttpClient();
+    var content = new StringContent(json, Encoding.UTF8, "application/json");
+    var result = await client.PostAsync(url, content);
+
+    //if response ok print it
+    if (result.IsSuccessStatusCode)
+    {
+        var response = await result.Content.ReadAsStringAsync();
+        Console.WriteLine(response);
+    }
+}
+```
+Use `http://127.0.0.1:3000/trigger-webhook-in` to trigget the in webhook and send the request.
+
+## Test server locally against Orca Cloud
+
+To expose the server securely from localhost and test it easily against the real Orca Cloud environment you can use [Secure Tunnels](https://ngrok.com/docs/secure-tunnels#what-are-ngrok-secure-tunnels). Take a look at [Ngrok](https://ngrok.com/) or [Cloudflare](https://www.cloudflare.com/).
+
+```bash
+ngrok http 3000
+```
+
+## Troubleshooting
+
+If you run into any issues not listed here, please [open a ticket](https://github.com/orca-scan/orca-webhook-dotnet/issues).
+
+## Examples in other langauges
+* [orca-webhook-dotnet](https://github.com/orca-scan/orca-webhook-dotnet)
+* [orca-webhook-python](https://github.com/orca-scan/orca-webhook-python)
+* [orca-webhook-go](https://github.com/orca-scan/orca-webhook-go)
+* [orca-webhook-java](https://github.com/orca-scan/orca-webhook-java)
+* [orca-webhook-php](https://github.com/orca-scan/orca-webhook-php)
+* [orca-webhook-node](https://github.com/orca-scan/orca-webhook-node)
 
 ## History
 
