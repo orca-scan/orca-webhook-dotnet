@@ -8,13 +8,13 @@ using System.Net.Http;
 
 namespace OrcaWebHookDotNet.Controllers
 {
-    
     [ApiController]
     [Route("/trigger-webhook-in")]
     public class OrcaWebHookInDotNet : ControllerBase
     {
-        //async function
-        public static async Task webHookIn(){
+        [HttpGet]
+        public async Task<OkResult> WebHookTrigger()
+        {
             // the following example adds a new row to a sheet, setting the value of Barcode, Name, Quantity and Description
             // TODO: change url to https://api.orcascan.com/sheets/{id}
             string url = "https://httpbin.org/post";
@@ -31,19 +31,8 @@ namespace OrcaWebHookDotNet.Controllers
                 var response = await result.Content.ReadAsStringAsync();
                 Console.WriteLine(response);
             }
-        }
-
-        [HttpGet]
-        public async Task<OkResult> WebHookTrigger()
-        {
-            //call async webHookIn
-            await OrcaWebHookInDotNet.webHookIn();
-
             //return ok
             return Ok();
         }
-
-
-
     }
 }
