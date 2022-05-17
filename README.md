@@ -5,7 +5,7 @@ Example of how to build an [Orca Scan WebHook](https://orcascan.com/docs/api/web
 ## Install
 
 ```bash
-git clone git@github.com:orca-scan/orca-webhook-dotnet.git
+git clone https://github.com/orca-scan/orca-webhook-dotnet.git
 cd orca-webhook-dotnet
 dotnet restore
 ```
