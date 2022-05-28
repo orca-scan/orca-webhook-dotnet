@@ -5,7 +5,7 @@ Example of how to build an [Orca Scan WebHook](https://orcascan.com/docs/api/web
 ## Install
 
 ```bash
-git clone git@github.com:orca-scan/orca-webhook-dotnet.git
+git clone https://github.com/orca-scan/orca-webhook-dotnet.git
 cd orca-webhook-dotnet
 dotnet restore
 ```
@@ -21,7 +21,7 @@ Your WebHook receiver will now be running on port 3000.
 You can emulate an Orca Scan WebHook using [cURL](https://dev.to/ibmdeveloper/what-is-curl-and-why-is-it-all-over-api-docs-9mh) by running the following:
 
 ```bash
-curl --location --request POST 'http://localhost:3000' \
+curl --location --request POST 'http://localhost:3000/orca-webhook-out' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "___orca_action": "add",
@@ -141,7 +141,7 @@ public class OrcaWebHookInDotNet : ControllerBase
     }
 }
 ```
-Use `http://127.0.0.1:3000/trigger-webhook-in` to trigget the in webhook and send the request.
+Use `http://127.0.0.1:3000/trigger-webhook-in` to trigger the in webhook and send the request.
 
 ## Test server locally against Orca Cloud
 
